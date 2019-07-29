@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Bienvenue sur mon site ou tu y trouveras la liste des derniers potins !! Et si jamais tu as une exclu, balance la des maintenant dans le feed grace au lien suivant : <a href="/gossips/new/">nouveau potin</a>
+    	See you soooon
+    </h1>
+    <h2>
+    	Ci dessous les derniers potins en vogue : <br/>
+    	</h2>
+    	<% gossips.each.with_index(1) do |gossip, index| %>
+        <p>	
+          <%= index %>
+          <%= gossip.author %><br/>
+           "<%= gossip.content %>"<br/>
+          <a href="/gossips/<%= index %>/"> Retrouvez plus d'infos sur ce post en cliquant ici : </a>
+        </p>
+      <% end %>
+        
+    
+  </body>
+</html>

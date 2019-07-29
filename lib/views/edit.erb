@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Créer un potin</title>
+  </head>
+ 	 <body>
+    	<h1>
+    		Ce Gossip ne te plait pas ? <br/>
+            Ne t'en fais pas, ici tu pourras modifier le Gossip numéro <%= params['id'] %> comme tu le souhaites.<br/>
+    	</h1>
+    	<p>
+    		Tu n'as qu'à rentrer les informations demandées :
+    	</p>
+    	<form action='/gossips/:id/edit' method='POST'>
+    		Saisi ici ton nom : <input type='text' name='gossip_author'/><br/>
+    		Balance ton potin  : <input type='text' name='gossip_content'/><br/>
+    		<input type='submit' value='Balance ton potin'/>
+    	</form>
+  	</body>
+</html>
